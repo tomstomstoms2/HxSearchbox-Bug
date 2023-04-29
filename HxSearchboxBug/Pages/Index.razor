@@ -1,0 +1,27 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<HxSearchBox DataProvider="ProvideSearchResults"
+			 Label="Example"
+			 TItem="SearchBoxItem"
+			 ItemTitleSelector="i => i.Title"
+			 ItemSubtitleSelector="i => i.Subtitle"
+			 ItemIconSelector="i => i.Icon"
+			 Placeholder="Search"
+			 OnItemSelected="OnItemSelected"
+			 OnTextQueryTriggered="OnTextQueryTriggered">
+	<DefaultContentTemplate>
+		<div class="p-2 text-muted">Search for Mouse, Table or Door...</div>
+	</DefaultContentTemplate>
+	<NotFoundTemplate>
+		<div class="small py-2 px-3 text-muted"><HxIcon CssClass="me-2" Icon="BootstrapIcon.EmojiFrown" />Sorry, I did not find that...</div>
+	</NotFoundTemplate>
+</HxSearchBox>
+
+
+
